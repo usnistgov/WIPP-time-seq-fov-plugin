@@ -1,0 +1,50 @@
+{
+	"name": "Time Sequence of 1 FOV plugin",
+	"version": "0.0.1",
+	"title": "Time Sequence of 1 FOV plugin",
+	"author": "Mohamed Ouladi",
+    "institution": "National Institute of Standards and Technology",
+    "repository": "https://github.com/usnistgov/WIPP-time-seq-fov-plugin",
+    "website": "",
+    "citation": null,
+	"description": "Creates a Stitching Vector with time slices for each FOV",
+	"containerId": "wipp/wipp-time-seq-fov-plugin:0.0.1",
+
+
+	"inputs": [
+		{
+			"name": "input",
+			"type": "collection",
+			"options": {
+				"format": "tiledtiff"
+			},
+			"description": "Images inputs for the plugin."
+		},
+		{
+			"name": "filenamepattern",
+			"type": "string",
+			"description": "Filename Pattern",
+            "required": false
+		}
+	],
+	"outputs": [
+
+		{
+			"name": "output",
+			"type": "stitchingVector",
+			"description": "Output stitching vector"
+		}
+	],
+	"ui": [
+		{
+			"key": "inputs.input",
+			"title": "Image Collection: ",
+			"description": "Pick a collection..."
+		},
+       {
+			"key": "inputs.filenamepattern",
+			"title": "Filename Pattern: ",
+			"description": "Specify the filename pattern."
+		}
+	]
+}
